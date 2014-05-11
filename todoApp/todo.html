@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app xmlns:type="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="../includes/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../includes/font-awesome/css/font-awesome.css" >
+</head>
+<body>
+<div ng-controller="TodoCtrl">
+    <h2>Total todos: {{getTotalTodos()}}</h2>
+    <ul class="list-unstyled">
+        <li ng-repeat="todo in todos">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+    </ul>
+    <form class="form-horizontal">
+        <input type="text" ng-model="formTodoText" ng-model-instant>
+        <button class="btn" ng-click="addTodo()"><i class="fa fa-plus-circle"></i>Add</button>
+    </form>
+
+    <button class="btn" ng-click="clearCompleted()"><i class="fa fa-trash-o"></i>Clear Completed</button>
+</div>
+
+<!-- Include jQuery and bootstrap JS plugins -->
+
+<!--<script src="includes/jquery/jquery-2.1.0.min.js"></script>-->
+
+<script src="../includes/underscore/underscore-min.js"></script>
+<script src="../includes/jquery/jquery-2.1.0.min.js"></script>
+<!--import jquery before angular-->
+<script src="../includes/angular/angular.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>-->
+
+<script src="../includes/bootstrap/js/bootstrap.js"></script>
+
+
+<script type="text/javascript" src="todo.js"></script>
+</body>
+</html>
