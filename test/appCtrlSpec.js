@@ -11,7 +11,7 @@ describe("hello world", function(){
 
     describe("AppCtrl", function () {
         it("should have a 'hello' message ", function(){
-            expect(appCtrl.message).toBe("Hello")
+            expect(appCtrl.message).toBe("hello")
         })
     });
 
